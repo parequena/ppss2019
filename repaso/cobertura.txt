@@ -1,0 +1,29 @@
+Practica 11: Diferencia entre mvn cobertura:cobertura,  mvn cobertura:cobertura-integration-test,  mvn site
+
+mvn cobertura:cobertura -> compila los .java, instrumenta los .class generados, compila los test unitarios,
+ejecuta los test unitarios, emite informe de cobertura.
+
+mvn cobertura:cobertura-integration-test -> compila los .java, instrumenta los .class generados, compila los test unitarios, 
+ejecuta los test unitarios, compila los test de integracion, ejecuta los test de integracion, emite informe de cobertura.
+
+mvn site -> hace las dos cosas anteriores, una detrás de la otra. PERO: cuando esta haciendo el
+mvn cobertura:cobertura-integration-test, mvn se da cuenta de que los test unitarios ya han sido ejecutados,
+por lo que no vuelve a ejecutar, solo los test de integracion. Esto explica que los contadores no se incrementen,
+ya que en la segunda vez no se han llegado a ejecutar los unitarios.
+Sin embargo, si hiciesemos primero mvn cobertura:cobertura y luego mvn cobertura:cobertura-integration-test, los contadores
+si que se incrementarian ya que ahí si que se ejecutan los test unitarios 2 veces
+
+mvn cobertura:clean -> contadores a 0
+
+
+<configuration>
+    <instrumentation>
+        <ignores>
+            <ignore> Se ignoran todas las llamadas a estos metodos. </ignore>
+        </ignores>
+
+        <excludes>
+            <exclude> Estas clases no serán instrumentadas. </exclude>
+        </excludes>
+    </instrumentation>
+</configuration>

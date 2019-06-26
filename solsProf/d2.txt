@@ -1,0 +1,30 @@
+// Día 13 de Febrero
+
+REPASO TEMA 1
+	- Cuando lanzamos una false de lcuclo de vida en Maven, se lanzan todas las anteriores.
+	- Para determinar el resultado esperado SIEMPRE hay que tener en cuenta la especificación.
+	- EFICIENTES : 
+		- Cuando menos test hacemos, somos más eficientes. // Esto no está realmente correcto, pero bueno.
+		- Hacer los menos test posibles.
+	- TEST INECESARIO: REDUNDANTE
+	- Debemos intentar que cada test muestre (o busque) un error diferente.
+	- EFECTIVOS -> Encontrar el mayor nº de errores, evitando redundancias.
+
+TEMA 2 - PRUEBAS CAJA BLANCA
+Pasos:
+	- 1º contruir el gráfo a partir del código fuente.
+	- 2º calcular la complejidad ciclomática.
+	- 3º obtener los caminos independientes.
+		- Recorrer todos los arcos y todos los nodos.
+		- Quitar condiciones excluyentes.
+		- Nos debemos asegurar que todas las lineas de código se prueban y que todas las condiciones se ejecutan en sus casos verdadero y falso.
+	- 4º Determinar datos de entrada según caminos.
+		"HAY QYE PONER VALORES CONCRETOS"
+	- 5º Determinar resultado esperado según espeficicaciones.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Prácticas:
+Cuando las validaciones de los test validan los métodos y todos sus atributos.
+
+Caja blanca: ¡¡¡¡ NOS DAN EL CÓDIGO !!!!
+

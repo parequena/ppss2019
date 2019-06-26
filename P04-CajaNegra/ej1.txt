@@ -1,0 +1,26 @@
+// Ejercicio 1
+public Ticket generaTicket(Cliente cliente, List<String> codArticulos) throws BOException;
+
+Clientes (NIF, ESTADO, DEUDA)
+V1. NIF: 111, Estado: Normal, Deuda: 0                 I1. NIF: NULL, Estado: Normal, Deuda: 0
+V2. NIF: 222, Estado: Moroso, Deuda: <1000             I2. NIF: 333, Estado: Moroso, Deuda: >=1000
+                                                       I3. NULL
+
+Lista Articulo (CODIGO)
+V3.      COD SIN REPETIR                               I4. NULL
+V4.      COD REPETIDOS                                 I5. LISTA VACIA
+                                                       I6. COD NO EXISTE
+DB (CONEXIÓN):
+V5. OK                                                 I7: NO OK
+
+CASOS       ENTRADA CLIENTE                 ENTRADA LISTA ARTICULO          DB                  SALIDA ESPERADA
+  C1        V1                              V3                              V5                  T:  C:(111, N, 0);   LV:[(A:1, U:1, P: 1)]; PT: 1
+  C2        V2                              V3                              V5                  T:  C:(111, N, 0);   LV:[(A:1, U:1, P: 1)]; PT: 1
+  C3        V1                              V4                              V5                  T:  C:(111, N, 0);   LV:[(A:1, U:2, P: 2)]; PT: 2
+  C4        V1                              V3                              I7                  BOException >> "Error al recuperar datos del artículo"
+  C5        I1                              V3                              V5                  BOException >> "El cliente no puede realizar la compra"
+  C6        I2                              V3                              V5                  BOException >> "El cliente no puede realizar la compra"
+  C7        I3                              V3                              V5                  BOException >> "El cliente no puede realizar la compra"
+  C8        V1                              I4                              V5                  BOException >> "El artículo no está en la BD"
+  C9        V1                              I5                              V5                  BOException >> "-----"
+  C10       V1                              I6                              V5                  BOException >> "El artículo no está en la BD"

@@ -1,0 +1,59 @@
+// Día  6 de Febrero
+
+TEMA 1
+	- Máquina virtual 	p.1
+	- Repositorio 		p.1 a p.4
+	- Maven				p.4 a p.6
+	- IntelliJ			p.7 a p.8
+
+
+
+EJERCICIO 1.A
+Estructura de directorios:
+(root) 	/.idea 					-- IntelliJ
+		/src 					--
+			/main				-- Código (Artefactos)		-- Fuentes deben estar en el mismo paquete (java).
+				/java 			--
+			/test				-- pruebas
+				/java			--
+		/target			 		-- Código compilado
+			/classes			-- Artefactos ".class"
+		pom.xml					-- Configuración. Acciones para construir el proyecto. !! Archivo importantisimo.
+
+
+
+EJERCICIO 1.B
+Coordenadas del proyecto
+practica1.ppss		:PO1-IntelliJ			:[<packaging>:]1.0-SNAPSHOT
+nombre del paquete 	 nombre del proyecto  	 empaquetado	versión
+	organización	     					por defecto
+												.jar
+
+¿Porque coordenadas?
+	Sirven para indicar donde está el proyecto localizado, además de la versión de este mismo, además, si se modifican o hay dependencias externas, tendremos que indicarlas aqui también.
+
+¿Por qué cada fichero tiene un proposito diferente? 
+	Porque por una parte, las coordenadas del proyecto vamos a construir nuestro proyecto, en las dependencias vamos a indicar que librerías externas necesitaremos, ..., y en la sección del plugin, añadiremos las configs que están fuera del estándar.
+	Plugin: Nos permite modificar, cambiar, etc.
+
+¿Que tipo de artefaactos son?
+	Por defecto .jar
+
+
+EJERCICIO 1.D
+Tabla
+	Identificación del caso
+	Datos de entrada
+	Resultado esperado  		Deacuerdo de las especificaciones, requerimientos, NUNCA del código.
+	Resutado real 				Deacuerdo del código fuente,
+
+
+
+EJERCICIO 1.E
+Algoritmo @Test
+	- Inicializar datos de entrada
+		- Resultado esperado.
+	- Invocar método a probar con los datos de entrada.
+		- > Guardamos el resultado real.
+	- Comprobamos que el resultado esperado == resultado real.
+		- > Si nos da el mismo resultado que el esperado, pasaremos los tests.

@@ -1,0 +1,25 @@
+// Día 3 de Abril
+
+Ciclo de vida de DBUnit
+	1. Eliminar pruebas anteriores
+	2. Cargar en BD los datos necesarios para pruebas
+	3. Ejecutar todas las pruebas con DBUnit
+
+surefire - Genera los informes de los test unitarios
+failsafe - Genera los informes de los test de integración
+
+goal integration-test (asociada a la fase de integration-test)
+	ejecuta los métodos anotados con @Test de las clases
+	IT*.javas; *IT.java; *ITCase.java;
+
+goal verify (asociada a la fase verify)
+	interrumpe la construcción del proyecyo en caso de que fallen los test
+	por defecto. Maven no interrumpe la construcción del proyecto.
+
+////////////////////////////
+Práctica
+
+/test
+	/java
+	/resources    ---> Botón derecho, Mark Directory as... (Test resources folder, o algo así)
+		/sql

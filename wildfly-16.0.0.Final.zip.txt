@@ -1,0 +1,5 @@
+Aqui falta el ficher wildfly-16.0.0.Final.zip
+Se puede encontrar en https://wildfly.org/downloads/
+En concreto yo usé la versión 16, porque era la ultima que estaba
+en ese momento y porque uso mi propia distrubición de Linux para
+realizar las prácticas.

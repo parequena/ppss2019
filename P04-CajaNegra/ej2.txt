@@ -1,0 +1,2 @@
+// Ejercicio 2
+public MatriuclaT0 matriuclaAlumno(AlumnoT0 alumno, List<AsignaturaT0> asignaturas) throws BOException

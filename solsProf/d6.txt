@@ -1,0 +1,14 @@
+// Día 27 de Marzo
+// No se si realmente es el día 6.
+
+Estructura del poryecto Multimodo
+    - Project (IntelliJ, NO Maven)
+    - P07 - multimodos      Proyecto Maven                          Modulos
+    -                           - hotel                         - HotelWebApp
+                                (con enpaquetamiento pom)
+                                                                - HotelDatabase
+                                - Matriculacion
+                                                                - matriculacion-comun
+                                                                - matriculacion-dao
+                                                                - matriculacion-proxy
+                                                                - matriculacion-bo

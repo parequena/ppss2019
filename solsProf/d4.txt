@@ -1,0 +1,41 @@
+// Día 27 de Febrero
+
+Caja Blanca
+Ejercicio 3:
+    - Antes de la tabla de casos de prueba, tenemos que "suponer datos de entrada".
+        : "Suponemos que:
+            ~ Login/Pass correctos  : XXXXXXX
+            ~ Socio válido          : XXXXXXX
+            ~ ISBN Válido           : XXXXXXX
+            ~ ISBN NoVálido         : XXXXXXX
+
+    - Si existe la base de datos, añadir en la Tabla de casos de prueba, la columna:
+        : "Estado de la BBDD"
+            ~ Valores posibles : OK / NO OK.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+TEMA 4 - CAJA NEGRA
+    - Método de particiones equivalentes.
+        : Paso 1: Identificar las entradas y salidas, con todos sus parámetros.
+            ~ Establecer las particiones válidas (para las entradas y salidas).
+                * ¿Cómo? Hay que preguntarse que condición hace que esa entrada o salida sea válida.
+            ~ Establecer las particiones inválidas.
+            ~ Ordenamos las E/S y las particiones.
+                * E1: PARAM1, PARAM2  , PARAM3            ] Particiones válidas V1
+                * E2: PARAM1, PARAM2.1, PARAM3
+                
+        /*
+            -- NOTAS --
+                - Cualquier Objeto entrada, tendrá la clase inválida NULL, salvo que se especifique lo contrario.
+                - Si además es una lista, añadimos la lista vacía.
+        */
+
+        : Paso 2: Combinamos las clases, que para esto existe una estrageia, deben estar todas en al menos un caso de prueba.
+            ~ ¿Cómo hago esto?
+                * Primero ponemos todas las clases válidas (teniendo en cuenta todos los valores de entrada)
+                * Ahora, incluyo las inválidas, y añado, una clase de entrada inválida (1 Y SOLO 1) por cada caso de prueba.
+        : Paso 3: Construimos la tabla de casos de prueba
+            ~ Suponiendo datos de entrada.
+            ~ Los valores de entrada DEBEN ser valores concretos, NUNCA SUPOSICIONES O RANGOS.
+            

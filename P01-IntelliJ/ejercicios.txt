@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------
+EJERCICIO 2.A
+	- Ejecutamos fase clean, podemos usar el comando mvn clean
+		- maven-clean-plugin:2.5:clean (default-clean)
+
+EJERCICIO 2.B
+	- Ejecutamos fase test, usando comando mvn test
+		- [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project 		P01-IntelliJ: Compilation failure: Compilation failure: 
+			[ERROR] (root)/P01-IntelliJ/src/test/java/ppss/MatriculaTest.java:[6,31] <identifier> expected
+			[ERROR] (root)/P01-IntelliJ/src/test/java/ppss/MatriculaTest.java:[7,13] <identifier> expected
+
+		Failures: 
+			[ERROR]   TrianguloTest.testTipo_trianguloC3:40 expected: <Valor c fuera del rango permitido> but was: <No es un triangulo>
+			[ERROR] Tests run: 5, Failures: 1, Errors: 0, Skipped: 0
+
+EJERCICIO 2.C
+	- He debugueado el código, y he encontrado que la condición estaba erronea, se ha solucionado, y además, he modificado el assert del test puesto que estaba mal escrito, una vez solucionados los errores, se ha vuelto a ejecutar los tests.
+	- Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+
+EJERCICIO 2.D
+	- El caso C1 es el que prueba el triangulo equilatero, usar un caso con datos de entada a=7, b=7, c=7 es equivalente a a=1,b=1,c=1, que son los datos de entrada del test C1, por lo tanto, no añadiría el test C5.
+	- C2 y C3 prueban otros casos de prueba, y por lo tanto, son necesarios, también añadiría datos de entada con a < 1 || b < 1, para comprobar que todos los ifs del código funcionan correctamente (cosa que no), además, probaría todos los tipos de triangulos, para ello habría que añadir el caso de Escaleno.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+EJERCICIO 3.A
+C1 - Edad=23, familiaNumerosa=true, repetidor=true.
+// C2 - Edad=23, familiaNumerosa=false, repetidor=true.
+C3 - Edad=23, familiaNumerosa=true, repetidor=false.
+// C4 - Edad=90, familiaNumerosa=false, repetidor=false.
+C5 - Edad=30, familiaNumerosa=false, repetidor=false.
+
+EJERCICIO 3.B
+Implementados C1, C3 y C5, los otros se han descatado.
+
+EJERCUCIO 3.C
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+EJERCICIO 4
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+EJERCICIO 5

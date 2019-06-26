@@ -1,0 +1,26 @@
+// Día 20 de Febrero
+
+TEMA 2 : Caja Blanca
+    - Objetivo : asegurarnos de que todas las líneas de código son probadas y que todas las condiciones ejecutar se ejecutan en sus casos T/F.
+    - Complejidad ciclomática (CC): Cota máxima del nº de caminos independientes.
+    - Camino independiente: Cuando alguno de sus nodos o aristas no se encuentra en ningún otro camino.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+TEMA 3 : Drivers
+    - Identificamos los drivers con @Test
+    - Anotaciones:
+        : @BeforeEach
+        : @AfterEach
+        : @BeforeAll
+        : @AfterAll
+        : Se utilizan para acciones iniciales y finales.
+    - Test Unitarios (UnitTest), usan la goal surefire:test (maven-surefire-plugin)
+    - Goal verify del plugin failsafe >> si se produce un failure o un error, interrumpe la instrucción del proyecto.
+    - Surefire y failsafe ejecutan todos los test
+        : Si queremos ejecutar solo algunos test, usarmoes la anotación @tag        (@Category)
+            ~ A la clase, al método, a ambos.
+        : Configurar plugins <groups> <excludeGroups>
+    - Configurations
+    - Si el resultado esperado es una excepción, usaremos assertThrows
+    - Para poder implementar/compilar los tests, necesitaremos la librería junit-jupiter-engine
+    - Si los test son personalizados, usaremos la librería junit-jupiter-params

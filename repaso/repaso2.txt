@@ -1,0 +1,43 @@
+Cobertura:
+    - Nivel 1 : Cobertura de líneas
+                Statement coverage.
+    - Nivel 2 : Cobertura de ramas (decision)
+                Branch coverage.
+    - Nivel 3 : Covertura de decisiones (mirar cada condición del if)
+                Condition coverage.
+    - Nivel 4 : Cobertura de multicondición.
+                Condition + Decision coverage.
+    - Nivel 5 : Cobertura de condición/decisiones.
+                Multicondition coverage.
+    - Nivel 6 : Cobertura de loop.
+                Loop coverage.
+    - Nivel 7 : Cobertura de caminos
+                Path coverage.
+
+pom.xml Covertura
+
+<configuration>
+    <instrumentation>
+        <excludes>
+            <exclude>ppss/matriculacion/dao/IAlumnoDAO</exclude>
+            <exclude>ppss/matriculacion/dao/IMatriculaDAO</exclude>
+            <exclude>ppss/matriculacion/dao/IAsignaturaDAO</exclude>
+        </excludes>
+    </instrumentation>
+</configuration>
+
+
+
+-- Web Drivers
+Waits:
+driver.manage().timeouts().implicityWait(10, TimeUnit.SECONDS); // Esto hace que se esperen 10 segundos implicitamente.
+WebDriverWait wait = new WebDriverWait(driver, 10)
+wait.until(ExpectedConditions.titleContains("titulo")); // Esta hará que se espere mientras que no se encuentre el "titulo"
+
+Actions acts = new Actions(driver); // Creamos un objeto de acciones.
+Action act = acts.keyDown(Keys.CONTROL).click(one).click(two).keyUp(Keys.CONTROL).build(); 
+// Esta cadena de acciones pulsará la tecla control, clicará en los WebElements "one", "two" y sotará la tecla control.
+act.perform(); // Aqui es donde se realizará la acción.
+
+
+
